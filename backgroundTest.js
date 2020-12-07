@@ -2,7 +2,7 @@
 function contextualClickHandler() {
     browser.browserAction.setPopup({"popup": "popup1.html"});
     browser.browserAction.openPopup();
-    browser.browserAction.setPopup(null);
+    browser.browserAction.setPopup({popup:null});
 }
 browser.menus.create({
     id: "MENU1",
@@ -15,7 +15,7 @@ browser.browserAction.onClicked.addListener(()=>{
     console.log("Got the click on browserAction button");
     browser.browserAction.setPopup({"popup": "popup2.html"});
     browser.browserAction.openPopup();
-    browser.browserAction.setPopup(null);
+    browser.browserAction.setPopup({popup:null});
 });
 
-browser.browserAction.setPopup(null);
+browser.browserAction.setPopup({popup:null});
